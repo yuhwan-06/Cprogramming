@@ -140,3 +140,43 @@ int main(void)
 }
 ```
 <img width="143" height="19" alt="image" src="https://github.com/user-attachments/assets/cf3d45ec-fac3-4804-b6db-5ce96448a8e7" />
+
+# 실습과제 5
+
+## 문제 설명
+
+int형 변수 `x`와 `y`를 선언하여 각각 `5`와 `15`로 초기화하고, int형 포인터 변수 `px`와 `py`를 선언하여 각각 `x`와 `y`를 가리키게 하시오.
+
+1. 포인터 `px`와 `py`를 사용하여 `x`의 값은 3배로 증가시키고(`*px *= 3`), `y`의 값은 5만큼 감소시키시오.
+2. 임시 포인터 변수 `temp`를 새로 선언하여 두 포인터 `px`와 `py`가 가리키는 대상(주소)을 서로 교환하시오.
+3. 교환 후 `px`와 `py`가 가리키는 값을 출력하여 포인터가 서로 바뀐 대상을 올바르게 가리키는지 확인하시오.
+
+## 정답 코드
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    // 1. 변수 및 포인터 초기화
+    int x = 5, y = 15;  // int형 변수 x와 y를 선언하고 각각 5와 15로 초기화
+    int *px = &x;  // 포인터 px를 선언하고 x의 주소를 저장
+    int *py = &y;  // 포인터 py를 선언하고 y의 주소를 저장
+
+    // 2. 포인터를 이용한 간접 참조 연산
+    *px *= 3;  // x의 값을 3배로 변경 (5 → 15)
+    *py -= 5;  // y의 값을 5 감소 (15 → 10)
+
+    // 3. 포인터 변수가 가리키는 주소(대상) 교환
+    int *temp = px;  // 임시 포인터 변수 temp에 px의 주소를 저장
+    px = py;  // px가 py가 가리키던 주소를 가리키도록 변경
+    py = temp;  // py가 temp가 저장한 원래 px의 주소를 가리키도록 변경
+
+    // 4. 교환된 포인터가 가리키는 값 출력
+    printf("px가 가리키는 값: %d\n", *px);  // y의 값인 10 출력
+    printf("py가 가리키는 값: %d\n", *py);  // x의 값인 15 출력
+
+    return 0;  // 프로그램 정상 종료
+}
+```
+<img width="163" height="41" alt="image" src="https://github.com/user-attachments/assets/8962d8b4-0a62-4373-a049-91dae35deda7" />
