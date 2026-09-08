@@ -10,7 +10,6 @@
 | `*&db` | **3.4** | **double** |
 
 # 실습과제 2
-# 실습과제 2
 
 ---
 
@@ -97,3 +96,24 @@ return 0;
 ```
 
 <img width="296" height="64" alt="image" src="https://github.com/user-attachments/assets/14498831-abb5-4760-9ba3-4938a39f81f0" />
+
+# 실습과제 3
+
+---
+
+```c
+#include <stdio.h>
+
+int main(void)
+{
+    int* ptr = (int*)125; // 정수형 변수인 125를 강제 형변환을 통해서 주소값처럼 쓰게 했기 때문
+
+    *ptr = 10;
+
+    printf("%d\n", *ptr);
+
+    return 0;
+}
+
+// 실행 중단 이유 : 임의로 만든 주소(*ptr)에 값을 저장하려 했기 때문
+```
