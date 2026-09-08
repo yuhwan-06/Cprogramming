@@ -117,3 +117,26 @@ int main(void)
 
 // 실행 중단 이유 : 임의로 만든 주소(*ptr)에 값을 저장하려 했기 때문
 ```
+
+# 실습과제 4
+
+---
+
+```c
+#include <stdio.h>
+int main(void)
+{
+    int a = 100, b=200;
+    int sum;
+    
+    int *pa = &a;
+    int *pb = &b;
+    int *psum = &sum;
+    
+    *psum = *pa + *pb;
+    
+    printf("두정수의 합 : %d\n", *psum);
+    return 0;
+}
+```
+<img width="143" height="19" alt="image" src="https://github.com/user-attachments/assets/cf3d45ec-fac3-4804-b6db-5ce96448a8e7" />
