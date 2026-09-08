@@ -96,3 +96,4 @@ return 0;
 }
 ```
 
+<img width="296" height="64" alt="image" src="https://github.com/user-attachments/assets/14498831-abb5-4760-9ba3-4938a39f81f0" />
