@@ -62,3 +62,134 @@ printf("sum:%d\n", sum);
 return 0;
 }
 ```
+
+# 실습과제 4
+
+```c
+#include <stdio.h>
+
+int main(void){
+    
+    int arr[5] = {1, 2, 3, 4, 5};
+    
+    int *ptr = arr;
+    
+    for(int i = 0; i < 5; i++){
+        *ptr += 2;
+        ptr++;
+    }
+    
+    ptr = arr;
+    
+    for(int i = 0; i < 5; i++){
+        printf("%d ", *(ptr + i));
+    }
+    
+    return 0;
+}
+
+```
+
+# 실습과제 5
+
+```c
+// ====1번째 방법====
+#include <stdio.h>
+
+int main(void){
+    
+    int arr[5] = {1, 2, 3, 4, 5};
+    
+    for(int i = 0; i < 5; i++){
+        *(ptr + i) += 2;
+    }
+    
+    ptr = arr;
+    
+    for(int i = 0; i < 5; i++){
+        printf("%d ", *(ptr + i));
+    }
+    
+    return 0;
+}
+
+// ====2번째 방법====
+#include <stdio.h>
+
+int main(void){
+    
+    int arr[5] = {1, 2, 3, 4, 5};
+    
+    int *ptr = arr;
+    
+    for(int i = 0; i < 5; i++){
+        ptr[i] += 2;
+    }
+    
+    for(int i = 0; i < 5; i++){
+        printf("%d ", *(ptr + i));
+    }
+    
+    return 0;
+}
+
+// ====3번째 방법====
+#include <stdio.h>
+
+int main(void) {
+    int arr[5] = {1, 2, 3, 4, 5};
+    int *ptr = arr;
+
+    for (int i = 0; i < 5; i++) {
+        *ptr++ += 2;                
+    }
+
+    ptr = arr;
+
+    for (int i = 0; i < 5; i++) {
+        printf("%d ", *ptr++);
+    }
+
+    return 0;
+}
+
+//====4번째 방법====
+#include <stdio.h>
+
+int main(void){
+    
+    int arr[5] = {1, 2, 3, 4, 5};
+    
+    int *ptr = arr;
+    
+    for(int i = 0; i < 5; i++){
+        *(ptr + i) += 2;
+        ptr++;
+    }
+    
+    for(int i = 0; i < 5; i++){
+        printf("%d ", *(ptr + i));
+    }
+    
+    return 0;
+}
+
+//====5번째 방법====
+#include <stdio.h>
+
+int main(void){
+    
+    int arr[5] = {1, 2, 3, 4, 5};
+    
+    int *ptr = arr;
+    
+    for(int i = 0; i < 5; i++){
+        ptr[i] = ptr[i] + 2;
+    }
+    
+    for(int i = 0; i < 5; i++){
+        printf("%d ", *(ptr + i));
+    }
+    
+    return 0;
+}
