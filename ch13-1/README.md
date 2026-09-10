@@ -19,3 +19,28 @@
 
 - 포인터 연산을 기존의 산술연산과 다르게 정의한 이유는 무엇일까?
   : 포인터 연산은 포인터가 가리키는 자료형의 크기를 고려하여 주소를 이동해야 하기 때문에 일반적인 산술연산과 다르게 정의된다.
+
+# 실습과제 2
+
+```c
+#include <stdio.h>
+int main(void)
+{
+
+int grade[5];
+
+int sum = 0, i, average;
+
+for(i = 0; i < 5; i++)
+{
+    printf("성적을 입력하시오: ");
+    scanf("%d", grade + i);
+}
+for(i = 0; i < 5; i++)
+    sum += *(grade + i);
+
+average = sum / 5.0;
+printf("성적 평균= %d\n", average);
+
+return 0;
+}
