@@ -354,3 +354,5 @@ void Sort(int *arr, int *result){
 짝수는 배열에 9번째 부터 채워나가며 right 변수를 빼나가고, 홀수는 0번째 부터 left 변수를 키워나가며 채운다
 
 ## 도전과제3 실행 결과
+<img width="228" height="264" alt="image" src="https://github.com/user-attachments/assets/6421160c-0215-4ee8-924a-d43d656ee902" />
+
