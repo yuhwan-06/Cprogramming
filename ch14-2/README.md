@@ -191,7 +191,7 @@ void Odd(int arr[]){
 
 반복문 안에서 조건문을 통해 홀수 조건 판별 후 출력
 
-## 실행 결과
+## 도전과제1 실행 결과
 <img width="232" height="290" alt="image" src="https://github.com/user-attachments/assets/cfc38340-0219-41f2-9abc-799ad5d8188d" />
 
 ---
@@ -258,7 +258,7 @@ void Trans(int arr[], int n){
 
 while문을 통해 2진수 변환 공식으로 배열에 저장 후 for문에서 배열에 역순으로 출력해서 되기 때문에 j-- 라는 조건을 달아 역순으로 출력
 
-## 실행 결과
+## 도전과제 2 실행 결과
 <img width="167" height="48" alt="image" src="https://github.com/user-attachments/assets/a7c2504b-63e5-48d7-b2a5-96c6e7e6d2e2" />
 
 
@@ -352,3 +352,5 @@ void Sort(int *arr, int *result){
 ```
 
 짝수는 배열에 9번째 부터 채워나가며 right 변수를 빼나가고, 홀수는 0번째 부터 left 변수를 키워나가며 채운다
+
+## 도전과제3 실행 결과
