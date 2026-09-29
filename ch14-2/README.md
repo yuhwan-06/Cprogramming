@@ -74,6 +74,34 @@ void get_data(int arr[])
 }
 ```
 
+# 실습과제 4
+
+```c
+#include <stdio.h>
+void get_parts(double num, int *int_part, double *frac_part);
+
+int main(void) {
+    double num;
+    int integer_part;
+    double fractional_part;
+
+    printf("실수를 입력하시오 : ");
+    scanf("%lf", &num);
+
+    get_parts(num, &integer_part, &fractional_part);
+
+    printf("정수부 : %d\n", integer_part);
+    printf("소수부 : %g\n", fractional_part);
+
+    return 0;
+}
+
+void get_parts(double num, int *int_part, double *frac_part) {
+    *int_part = (int)num;
+    *frac_part = num - *int_part; 
+}
+```
+
 # 실습과제 5
 
 ## 교재 324페이지 2번 문제
