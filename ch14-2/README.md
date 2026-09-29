@@ -122,3 +122,69 @@ int main (void){
 
 ```
 - 위 코드에 문제점 : 값을 수정하지 않을 const 값을 억지로 변경하려 했기 때문
+
+
+# 도전 문제 1
+
+---
+```c
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+```
+
+헤더 파일 선언
+
+```c
+void Even(int arr[]);
+void Odd(int arr[]);
+```
+
+짝수 홀수를 나눌 함수 선언
+
+```c
+
+int main(void){
+    int arr[10];
+    
+    for(int i = 0; i < 10; i++){
+        printf("입력 : ");
+        scanf("%d", &arr[i]);
+    }
+    
+    Even(arr);
+    Odd(arr);
+}
+
+```
+
+메인함수에서 배열을 입력받고 각각의 함수를 호출
+
+```c
+
+void Even(int arr[]){
+    printf("짝수 출력 : ");
+    
+    for(int i = 0; i < 10; i++){
+        if(arr[i] % 2 == 0){
+            printf("%d ", arr[i]);
+        }
+```
+반복문 안에서 조건문을 통해 짝수 조건 판별 후 출력
+    }
+    
+    printf("\n");
+}
+
+```c
+
+void Odd(int arr[]){
+    printf("홀수 출력 : ");
+    
+    for(int i = 0; i < 10; i++){
+        if(arr[i] % 2 != 0){
+            printf("%d ", arr[i]);
+        }
+```
+반복문 안에서 조건문을 통해 짝수 조건 판별 후 출력
+    }
+}
