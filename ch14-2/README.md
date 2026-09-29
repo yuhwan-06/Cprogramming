@@ -168,12 +168,14 @@ void Even(int arr[]){
         if(arr[i] % 2 == 0){
             printf("%d ", arr[i]);
         }
-```
+
 반복문 안에서 조건문을 통해 짝수 조건 판별 후 출력
     }
     
     printf("\n");
 }
+
+```
 
 ```c
 
@@ -184,7 +186,7 @@ void Odd(int arr[]){
         if(arr[i] % 2 != 0){
             printf("%d ", arr[i]);
         }
-```
 반복문 안에서 조건문을 통해 짝수 조건 판별 후 출력
     }
 }
+```
