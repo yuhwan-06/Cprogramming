@@ -168,14 +168,13 @@ void Even(int arr[]){
         if(arr[i] % 2 == 0){
             printf("%d ", arr[i]);
         }
-
-반복문 안에서 조건문을 통해 짝수 조건 판별 후 출력
     }
     
     printf("\n");
 }
 
 ```
+반복문 안에서 조건문을 통해 짝수 조건 판별 후 출력
 
 ```c
 
@@ -186,7 +185,70 @@ void Odd(int arr[]){
         if(arr[i] % 2 != 0){
             printf("%d ", arr[i]);
         }
-반복문 안에서 조건문을 통해 짝수 조건 판별 후 출력
     }
 }
 ```
+
+반복문 안에서 조건문을 통해 홀수 조건 판별 후 출력
+
+#도전과제 2
+
+```c
+
+---
+
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+
+```
+
+헤더파일 선언
+
+```c
+
+void Trans(int arr[], int n);
+
+```
+
+2진수로 변경할 함수 선언
+
+```c
+
+int main(void){
+    int arr[100];
+    
+    int n;
+    printf("10진수 입력 : ");
+    scanf("%d", &n);
+    
+    Trans(arr, n);
+    return 0;
+}
+
+```
+
+입력 받을 10진수와 변환할 함수 호출
+
+```
+
+```c
+
+void Trans(int arr[], int n){
+    int i = 0;
+    
+    while(n > 0){
+        arr[i] = n % 2;
+        n /= 2;
+        i++;
+    }
+    
+    for(int j = i - 1; j >= 0; j--){
+        printf("%d", arr[j]);
+    }
+    
+    printf("\n");
+}
+
+```
+
+while문을 통해 2진수 변환 공식으로 배열에 저장 후 for문에서 배열에 역순으로 출력해서 되기 때문에 j-- 라는 조건을 달아 역순으로 출력
