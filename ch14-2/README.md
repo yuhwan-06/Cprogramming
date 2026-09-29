@@ -19,4 +19,78 @@
 값이 변경되는 것을 방지하기 위해 사용한다.
 
 
+# 실습과제 2
+
+```c
+#include <stdio.h>
+
+int main(void){
+    
+    int arr[5];
+    
+    printf("정수 5개 입력\n");
+    
+    for(int i = 0; i < 5; i++){
+        
+        printf("%d번째 정수 : ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+    
+    int min = arr[0];
+    
+    for(int i = 0; i < 5; i++) {if(min > arr[i]) min = arr[i];}
+    
+    printf("최소값 : %d\n", min);
+    return 0;
+}
+```
+
 # 실습과제 3
+
+```c
+#include <stdio.h>
+
+void get_data(int []);
+
+int main(void)
+{
+    int i, data[5];
+
+    get_data(data);
+
+    for(i = 0; i < 5; i++)
+        printf("%d번째 data: %d\n", i+1, data[i]);
+
+    return 0;
+}
+
+void get_data(int arr[])
+{
+    for(int i = 0; i < 5; i++)
+    {
+        printf("%d번째 data를 입력하시오: ", i + 1);
+        scanf("%d", &arr[i]);
+    }
+}
+```
+
+# 실습과제 5
+
+## 교재 324페이지 2번 문제
+
+```c
+void ShowData(const int * ptr){
+    int * nptr=ptr;
+    printf("%d ln", *rptr);
+    *nptr=20;
+}
+
+int main (void){
+ int num=10;
+ int * ptr=&num;
+ ShowData(ptr);
+ return 0;
+}
+
+```
+- 위 코드에 문제점 : 값을 수정하지 않을 const 값을 억지로 변경하려 했기 때문
