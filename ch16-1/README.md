@@ -47,6 +47,8 @@ int main(void){
 }
 ```
 - 결과값 출력 후 코드 종료
+- <img width="80" height="54" alt="image" src="https://github.com/user-attachments/assets/bba8dc98-3ea1-4037-ad38-dad399674ef9" />
+
 
 # 실습과제 2
 ---
@@ -95,7 +97,7 @@ int main(void) {
 }
 ```
 - 결과 출력 및 코드 종료
-
+- <img width="495" height="107" alt="image" src="https://github.com/user-attachments/assets/5baed5a4-16ce-4f0b-b7f7-5e83f993c206" />
 
 # 실습과제 3
 ---
@@ -148,6 +150,7 @@ int main(void){
 }
 ```
 결과값 출력 및 코드 종료
+<img width="225" height="52" alt="image" src="https://github.com/user-attachments/assets/ffe8d4f1-4599-414c-8a8b-815b47ff8130" />
 
 # 실습과제 4
 ---
@@ -188,7 +191,7 @@ int main(void) {
 }
 ```
 - 결과 출력및 코드 종료
-
+<img width="263" height="203" alt="image" src="https://github.com/user-attachments/assets/bd11ad39-e7cf-45ce-897f-8269bb60949e" />
   
 # 실습과제 5
 ---
@@ -226,3 +229,4 @@ int main(void) {
 }
 ```
 - 결과 출력 및 코드 종료
+<img width="370" height="127" alt="image" src="https://github.com/user-attachments/assets/e15e33eb-06af-4ced-8852-2c41e8219721" />
