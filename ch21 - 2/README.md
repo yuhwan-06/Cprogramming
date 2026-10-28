@@ -60,3 +60,59 @@ int main(void){
 }
 ```
 - 프로그램 종료
+
+---
+
+# 실습과제3
+
+```c
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+```
+- 헤더파일 선언
+
+```c
+int main(void)
+{
+    char name[100];
+    char address[200];
+    char carNum[100];
+```
+- 이름, 주소, 차 번호 배열 변수 선언
+
+```c
+    printf("이름: ");
+    fgets(name, sizeof(name), stdin);
+
+    printf("주소: ");
+    fgets(address, sizeof(address), stdin);
+
+    printf("자동차번호: ");
+    fgets(carNum, sizeof(carNum), stdin);
+```
+- fgets 함수롤 변수 입력받기
+
+```c
+    name[strcspn(name, "\n")] = '\0';
+    address[strcspn(address, "\n")] = '\0';
+    carNum[strcspn(carNum, "\n")] = '\0';
+```
+- 줄바꿈 제거
+
+```c
+    puts("<결과 출력>");
+    printf("이름:");
+    puts(name);
+
+    printf("주소:");
+    puts(address);
+
+    printf("자동차번호:");
+    puts(carNum);
+
+    return 0;
+}
+```
+- put 함수로 출력 후 프로그램 종료
+<img width="227" height="137" alt="image" src="https://github.com/user-attachments/assets/1431a77c-9ce4-4622-9466-02b566ce6bb1" />
