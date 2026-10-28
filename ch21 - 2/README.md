@@ -116,3 +116,102 @@ int main(void)
 ```
 - put 함수로 출력 후 프로그램 종료
 <img width="227" height="137" alt="image" src="https://github.com/user-attachments/assets/1431a77c-9ce4-4622-9466-02b566ce6bb1" />
+
+---
+
+# 실습과제4
+
+```c
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+```
+- 헤더파일 선언
+
+```c
+int main(void) {
+
+	char str[20];
+	printf("문자열 입력 : ");
+	fgets(str, sizeof(str), stdin);
+```
+- 배열 초기화 후 fgets 함수로 문자열 입력받기
+
+```c
+	for (int i = 0; str[i] != '\0'; i++) {
+
+		if (str[i] == '\n') { 
+			str[i] = '\0'; 
+			break; 
+		}
+	}
+```
+- for문을 이용해서 '\n' 값을 찾았을때 '\0' 대입 후 반복문 탈출
+
+```c
+	printf("%s", str);
+	
+	return 0;
+}
+```
+- 출력 후 프로그램 종료
+
+---
+
+# 실습과제5
+
+```c
+#define _CRT_SECURE_NO_WARNINGS
+#include <stdio.h>
+#include <string.h>
+```
+- 헤더파일 선언
+
+```c
+void PrintWordNum(char []);
+```
+- 단어 개수를 출력할 함수 선언
+
+```c
+int main(void) {
+
+	char str[50];
+	printf("문자열 입력 : ");
+	fgets(str, sizeof(str), stdin);
+```
+- 배열 선언 후 fgets 함수를 통해 입력 받기
+
+```c
+	for (int i = 0; str[i] != '\0'; i++) {
+
+		if (str[i] == '\n') { 
+			str[i] == '\0'; 
+			break;
+		}
+	}
+```
+- '\n' 문자 제거
+
+```c
+	PrintWordNum(str);
+
+	return 0;
+}
+```
+- 출력 함수 호출
+
+```c
+void PrintWordNum(char str[]) {
+
+	int count = 0;
+
+	for (int i = 0; str[i] != '\0'; i++) {
+
+		if (str[i] == ' ') count++;
+	}
+
+	printf("단어수 : %d", count + 1);
+}
+```
+- 반복문을 통해 공백을 만났을때 단어 개수 +1, 마지막 단어에는 공백이 없으니 출력시 카운트된 개수에 + 1을 하여 출력
+<img width="186" height="42" alt="image" src="https://github.com/user-attachments/assets/d6dd9e66-9c33-45c6-bf59-93963a8f796d" />
